@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="javascript/pages-switching.js"></script>
+  <script src="javascript/jquery/jquery.serializejson.js"></script>
+  <script src="javascript/login.js"></script>
+
+</head>
+
+<body>
+
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a id="login_tab" href="#login">Log In</a></li>
+      </ul>
+      <div class="tab-content">
+      <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          <form id="signupForm" action="/" method="post" > 
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input id="firstName" name="firstName" type="text" required autocomplete="on" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input id="lastName" name="lastName" type="text"required autocomplete="on"/>
+            </div>
+          </div>
+          
+             <div class="field-wrap">
+           		 <label>
+            	 Birth Date<span class="req">*</span>
+            	</label>
+           		 <input id="birthDate" name="birthDate" type="date" required autocomplete="off" value=" "/>        		 
+            </div>  
+             
+            <div class="field-wrap">
+              <label>
+                Gender<span class="req" for ="gender">*</span>
+              </label>  
+			<br />
+			<br />
+             <select id="gender" name="gender" required autocomplete="off">
+			<option value="MALE">Male</option>
+			<option value="FEMALE">Female</option>
+			</select>
+       	    </div> 
+           
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input id="email" name="email" type="email"required autocomplete="on"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input id = "password" name="password" type="password"required autocomplete="off"/>
+          </div>
+
+            <div class="field-wrap">
+              <label>
+                Confirm password<span class="req">*</span>
+              </label>
+              <input id = "passwordConfirm" name = "passwordConfirm" type="password"required autocomplete="off"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Phone Number<span class="req">*</span>
+              </label>
+              <input id = "phoneNumber" name = "phoneNumber" type="text"required autocomplete="on"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Passport Picture<span class="req">*</span>
+              </label>
+             <input id = "passportPicture" name = "passportPicture" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Your label here." type="file"
+              accept="image/gif, image/jpeg"  required /></div>
+          
+          <button id="signupButton" class="button button-block">Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="#" method="post" id="loginForm">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input id="email" name="email" type="email" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input id = "password" name="password" type="password" required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button id= "loginButton" class="button button-block">Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+
+</body>
+</html>
