@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET			/						controllers.UserController.checkServerStatus
+POST		/login					controllers.UserController.login
+GET			/logout					controllers.UserController.logout
+POST		/signup					controllers.UserController.signup
+GET			/profile				controllers.UserController.getUserProfile
+POST		/updateUser				controllers.UserController.updateUser
+GET		    /allUsers				controllers.UserController.getAllUsers
+
+GET		    /myDeliveries				controllers.RequestDeliveryController.getAllDeliveries
+DELETE		/deletePackage/:id			controllers.RequestDeliveryController.deletePackage(id :Long)
+
+POST        /requestDelivery        controllers.RequestDeliveryController.requestDelivery
+POST		/submit_delivery_quote	controllers.RequestDeliveryController.submitDeliveryQuote
+GET			/new_packages			controllers.RequestDeliveryController.getNewPackages
+
+#ADMIN OPERATIONS CHECK IF CURRENT USER IS ADMIN
+DELETE		/deleteUser/:id				controllers.UserController.deleteUser(id :Long)
+POST		/updateUser/:id				controllers.UserController.updateUserById(id :Long)
+GET			/profile/:id				controllers.UserController.getUserProfileById(id :Long)
+POST		/changeToAdmin/:id			controllers.UserController.changeUserToAdmin(id :Long)
+
+POST        /setQuestion        			controllers.ForumController.setNewQuestion
+GET		    /allQuestions					controllers.ForumController.getAllQuestions
+POST		/setAnswer/:questionId			controllers.ForumController.setNewAnswer(questionId :Long)
+GET			/allQuestionAnswers/:questionId				controllers.ForumController.getAllQuestionAnswers(questionId :Long)
