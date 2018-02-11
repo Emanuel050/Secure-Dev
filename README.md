@@ -1,7 +1,7 @@
 # Secure-Dev
 
-The site is protected from:
-sql injection.
+The site is protected from: 
+sql injection.s
 csrf.
 XSS.
 input validation.
