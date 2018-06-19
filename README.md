@@ -1,5 +1,8 @@
 # Secure-Dev
 
-The site is protected from: csrf, XSS, Sql injection, input validation.
-server side is written in java with play 2.5 framework. client side is written in html,css,JavaScript.
+Web Application project, developing a secure site:
+Server: Java, Play Framework 2.5, JPA, MySQL.
+Client: HTML5, CSS, JavaScript, JQuery, Ajax, Bootstrap.
+Protections implemented: CSRF, XSS, SQL Injection, Data Validation.
+
 
